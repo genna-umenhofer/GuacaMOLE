@@ -1,7 +1,7 @@
 <?php
 
 require "../vendor/autoload.php";
-include("../env.php");
+include("../.env.php");
 include("../functions.php");
 
 use PHPMailer\PHPMailer\PHPMailer;
