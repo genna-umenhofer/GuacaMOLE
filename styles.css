@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=IM+Fell+Double+Pica:ital@0;1&display=swap');
+
+/* --- Global Styles ---*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --gm-dk-navy: #003a66;
+  --gm-navy: #2F6187;
+  --gm-teal: #29ABB9;
+  --gm-green: #32B871;
+  --gm-lavender: #c3b9df;
+  --gm-purple: #9747FF;
+}
+
+body {
+  margin: 0 15% 0 15%;
+  font-family: 'Hind Siliguri', sans-serif;
+  color: var(--gm-dk-navy);
+}
+
+main {
+  margin: 0 1% 0 1%;
+}
+
+section {
+  margin: 1%;
+}
+
+.nav-link {
+  color: var(--gm-navy);
+  transition: color 400ms;
+  text-decoration: none;
+}
+
+.nav-link:hover { 
+  color: var(--gm-purple);
+}
+
+/*TBD if this works once pages are linked up*/
+.nav-active {
+  color: var(--gm-green);
+  border-bottom: 2px solid var(--gm-purple);
+  /*border-width: 0 0 2px;
+  border-color: var(--gm-purple); */
+}
+
+.left-margin {
+  margin-left: 25px;
+}
+
+.right-margin {
+  margin-right: 25px;
+}
+
+.top-margin {
+  margin-top: 4rem;
+}
+
+.bottom-margin {
+  margin-bottom: 1rem;
+}
+
+.top-padding {
+  padding-top: 10px;
+}
+
+.bottom-padding {
+  padding-bottom: 10px;
+}
+
+.right-padding {
+  padding-right: 10px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.white-space {
+  margin-top: 10rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'IM Fell Double Pica', serif;
+  font-size: 2rem;
+  color: var(--gm-purple);
+}
+
+h2 {
+  font-family: 'IM Fell Double Pica', serif;
+  font-size: 1.5rem;
+  color: var(--gm-dk-navy);
+  text-align: center;
+  justify-content: center;
+}
+
+h3 {
+  font-family: 'IM Fell Double Pica', serif;
+  color: var(--gm-purple);
+}
+
+#answer {
+  color: var(--gm-purple);
+}
+
+.button,
+button {
+  width: 200px;
+  height: 55px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 405px;
+  background-color: var(--gm-teal);
+  transition: background-color 500ms;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover,
+button:hover {
+  background-color: var(--gm-purple);
+}
+
+.button:active,
+button:active, .active {
+  background-color: var(--gm-green);
+  transition: none;
+}
+
+.button-choice {
+  background-color: var(--gm-green);
+}
+
+.nav-choice {
+  border-width: 0 0 2px;
+  border-color: var(--gm-purple); 
+}
+
+.flex-row {
+  display: flex;
+  gap: 10%;
+  justify-content: flex-start;
+  padding-left: 3rem;
+}
+
+.overflow {
+  overflow-y: scroll;
+}
+
+.even-space {
+  display: grid;
+  margin: 0 10% 0 10%;
+}
+
+.resources {
+  display: flex;
+  background-color: var(--gm-lavender);
+  width: 98%;
+  margin: 10px 10px 0 0;
+  padding: .3rem;
+ justify-content: space-around;
+ position: sticky;
+ top: 0;
+ border-radius: 405px;
+}
+
+/* --- Navigation & Footer ---*/
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'IM Fell Double Pica', serif;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  font-size: 1.2rem;
+  z-index: 5;
+  border-style: inset;
+  border-width: 0 0 2px;
+  border-color: var(--gm-purple); 
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-nav > li {
+  width: 20%;
+  align-items: center;
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.bottom-nav > li > a {
+  text-decoration: none;
+}
+
+.top-nav > li {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logo {
+  width: 65px;
+}
+
+.gray-circle {
+  background-color: var(--gm-green);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray-circle > span {
+  color: white;
+}
+
+.green-box {
+  color: var(--gm-dk-navy);
+}
+
+.green-box > a {
+  color: var(--gm-dk-navy);
+  transition: color 400ms;
+}
+
+.green-box > a:hover {
+  color: var(--gm-purple);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 50px auto 20px auto;
+  justify-content: space-around;
+}
+
+footer > div > p {
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'IM Fell Double Pica', serif;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer > div > ul > li > a {
+  text-decoration: none;
+  font-family: 'IM Fell Double Pica', serif;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  padding: 40px;
+}
+
+/* --- Home Page ---*/
+
+.gray-box1 {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  /*max-width: 230px;
+  max-height: 230px;*/
+  /*background-color: var(--gm-lavender);*/
+  /*padding: 1rem;*/
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+}
+
+.gray-box1 > img {
+  width: 230px;
+  height: 230px;
+  padding: 0;
+}
+
+.gray-box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--gm-green);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.gray-box2 > span {
+  color: white;
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+#hero {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 65vh;
+  gap: .8rem;
+}
+
+#hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#hero > h1 {
+  font-size: 2rem;
+  color: var(--gm-purple);
+}
+
+.card1 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card1-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  scroll-margin-top: 120px;
+}
+
+.contact-form > h2 {
+  text-align: center;
+  font-family: 'IM Fell Double Pica', serif;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+::placeholder {
+  color: var(--gm-purple);
+}
+
+input {
+  height: 30px;
+  padding: .3rem;
+  margin-bottom: 2rem;
+  font-family: 'IM Fell Double Pica', serif;
+  font-size: larger;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--gm-purple); 
+  color: var(--gm-dk-navy);
+}
+
+.contact-form > form > select {
+  height: 30px;
+  padding: .2rem;
+  margin-bottom: 2rem;
+  font-family: 'IM Fell Double Pica', serif;
+  font-size: larger;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--gm-purple); 
+  color: var(--gm-purple);
+}
+
+textarea {
+  height: 60px;
+  padding: .3rem;
+  margin-bottom: 2rem;
+  font-family: 'IM Fell Double Pica', serif;
+  color: var(--gm-dk-navy);
+  font-size: larger;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--gm-purple); 
+}
+
+#blurb > p {
+  padding: 1rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* --- Google Icons --- */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* --- Connect --- */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  width: 75%;
+  margin-right: 2rem;
+}
+
+.highlights > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  float: left;
+  z-index: 1;
+  height: 65vh;
+  gap: 1rem;
+  overflow-y: scroll;
+}
+
+.side-nav > form > div {
+  display: block;
+}
+
+.side-nav > form > div > input {
+  margin: 0;
+}
+
+.container-learn {
+  height: 65vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem .5rem;
+  border-bottom: 2px solid var(--gm-purple);
+  border-top: 2px solid var(--gm-purple);
+}
+
+.container-practice {
+  height: 65vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+.question-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-align {
+  display: flex;
+  justify-content: end;
+  padding: 1rem 0;
+}
+
+
+/* --- Scroll Bar --- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(#999); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gm-green); 
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gm-purple); 
+}
+
+/* --- Summary/Details --- */
+details {
+  border-bottom: 1px solid var(--gm-purple);
+  padding: 0.5em 0.5em 0;
+}
+/*
+details > #answer {
+  color: var(--gm-purple);
+}
+*/
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--gm-purple);
+  margin-bottom: 0.5em;
+}
