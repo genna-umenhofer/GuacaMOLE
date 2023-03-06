@@ -137,7 +137,9 @@ function getInfoFromDB(topic) {
 
   xhr.onreadystatechange = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      console.log(this.responseText);
       let data = JSON.parse(this.responseText);
+      console.log(data);
       displayInfo(data);
     }
   }

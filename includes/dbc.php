@@ -1,9 +1,11 @@
 <?php
+include('../.env.php');
 
-$dbServerName = "localhost";
-$dbUserName = "guacamole_user";
-$dbPassword = "i9Dfpbc_PZB/3hK*";
-$dbName = "guacamole";
+
+$dbServerName = $databServer;
+$dbUserName = $databUser;
+$dbPassword = $databPass;
+$dbName = $databName;
 
 $conn = mysqli_connect($dbServerName, $dbUserName, $dbPassword, $dbName);
 
